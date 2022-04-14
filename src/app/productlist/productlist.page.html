@@ -1,0 +1,29 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button defaultHref="home"></ion-back-button>
+        </ion-buttons>
+        <ion-item>
+            <ion-icon name="cart" float-left></ion-icon>
+            <ion-title>productlist </ion-title>
+        </ion-item>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+    <div>
+        <ion-card *ngFor="let item of product  ">
+
+            <ion-card-header>
+                <ion-card-subtitle> </ion-card-subtitle>
+                <ion-card-title color="primary"> {{item.name}}</ion-card-title>
+            </ion-card-header>
+            <ion-card-content>
+                <img src="{{item.image}}" alt="">
+                <ion-label> {{item.description}}</ion-label>
+            </ion-card-content>
+
+        </ion-card>
+    </div>
+
+</ion-content>
